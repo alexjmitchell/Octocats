@@ -1,6 +1,6 @@
 .octodex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center baseline;
   margin-top: 20px;
 }
@@ -23,18 +23,44 @@ img {
   width: 250px;
 }
 
-.image-footer .image-caption {
+.image-caption {
   display: flex;
   flex-direction: row;
-  justify-content: baseline center;
+  justify-content: baseline center space-between;
+  background: yellow;
+}
+
+.image-caption a {
+  display: flex;
+  flex-direction: row;
+  padding-top: 4px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.image-footer {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  background: orange;
 }
 
 .authors img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-style: none;
-  margin: 10px;
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
+  padding-right: 2px;
+}
+
+.authors li {
+  display: flex;
+  flex-direction: row;
+}
+
+span {
+  align-self: auto;
+  padding: 4px;
 }
