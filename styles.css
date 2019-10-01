@@ -1,0 +1,40 @@
+.octodex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center baseline;
+  margin-top: 20px;
+}
+
+.octocat img {
+  display: flex;
+  flex-direction: row;
+}
+
+li > a > img {
+  display: flex;
+  flex-direction: row;
+  border: 1px grey solid;
+}
+
+img {
+  display: flex;
+  flex-direction: row;
+  height: 250px;
+  width: 250px;
+}
+
+.image-footer .image-caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline center;
+}
+
+.authors img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  margin: 10px;
+  height: 20px;
+  width: 20px;
+}
