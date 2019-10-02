@@ -1,68 +1,87 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: auto;
+  width: 75%;
+}
+
+/* 2nd Octocat */
+li.octocat:nth-child(2n) .authors > li > a:nth-child(2n) {
+  display: none;
+}
+
 .octodex {
   display: flex;
-  justify-content: space-evenly;
+  flex-flow: row wrap;
+  justify-content: space-around;
   align-items: center baseline;
-  margin-top: 20px;
-  margin-left: 200px;
-  margin-right: 200px;
 }
 
-.octocat img {
-  display: flex;
-  flex-direction: row;
+.octocat {
+  flex-grow: 1;
 }
 
-li > a > img {
-  display: flex;
-  flex-direction: row;
-  border: 1px grey solid;
+.octodex .octocat > a > img {
+  border: 1px #999 solid;
 }
 
 img {
-  display: flex;
-  flex-direction: row;
   height: 250px;
   width: 250px;
 }
 
 .image-caption {
   display: flex;
-  flex-direction: row;
-  justify-content: baseline center space-between;
-  background: yellow;
+  align-self: flex-end;
+  justify-content: space-between;
+  color: grey;
+  font-size: 0.75rem;
+}
+
+.image-caption span {
+  font-weight: bold;
+}
+
+.image-caption span::after,
+.image-caption a::after {
+  content: " ";
+  white-space: pre;
 }
 
 .image-caption a {
   display: flex;
   flex-direction: row;
-  padding-top: 4px;
   font-weight: bold;
   color: black;
   text-decoration: none;
 }
 
 .image-footer {
-  padding-top: 5px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   flex-wrap: wrap;
-  background: orange;
+  width: 250px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #999;
 }
 
 .authors {
   padding: 0px;
 }
 
-li {
+ul {
   list-style: none;
 }
 
 .authors img {
   border-style: none;
-  height: 30px;
-  width: 30px;
-  padding-right: 2px;
+  height: 20px;
+  width: 20px;
 }
 
 .authors li {
@@ -70,7 +89,21 @@ li {
   flex-direction: row;
 }
 
-span {
-  align-self: auto;
-  padding: 4px;
+.image-number::before {
+  content: "#";
+}
+
+.image-number {
+  margin-right: auto;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.image-footer::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: #999999 transparent transparent transparent;
 }
